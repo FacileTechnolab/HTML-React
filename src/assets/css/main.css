@@ -1,0 +1,32 @@
+@import url('./contact.css');
+@import url('./contact_responsive.css');
+@import url('./elements.css');
+@import url('./elements_responsive.css');
+@import url('./events.css');
+@import url('./events_responsive.css');
+@import url('./news.css');
+@import url('./news_responsive.css');
+@import url('./speakers.css');
+@import url('./speakers_responsive.css');
+@import url('./main_styles.css');
+@import url('./responsive.css');
+
+.home-image-container {
+  height: 448px;
+  width: 100%;
+}
+
+.home-image-content-container {
+  padding-top: 70px;
+}
+
+.speaker_content_container {
+  position: absolute;
+  left: 0;
+  top: 65%;
+  width: 100%;
+}
+
+.speaker-header {
+  margin-top: -167px;
+}
