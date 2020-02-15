@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import Home from "./Home";
 import Speakers from "./Speakers";
 import Events from "./Events";
+import News from "./News";
+import Contact from "./Contact";
 
 function index() {
   return (
@@ -14,6 +16,8 @@ function index() {
       <Switch>
         <Route path="/speakers" component={Speakers} />
         <Route path="/events" component={Events} />
+        <Route path="/news" component={News} />
+        <Route path="/contact" component={Contact} />
         <Route path="/" component={Home} />
       </Switch>
       <Footer />

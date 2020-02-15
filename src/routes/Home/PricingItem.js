@@ -8,7 +8,7 @@ const PricingItem = props => (
         <div className="pricing_price">{props.price}</div>
         <ul className="pricing_list">
           {props.list.map(item => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
         <div className="pricing_info">

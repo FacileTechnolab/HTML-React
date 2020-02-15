@@ -1,5 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faPinterest,
+  faTwitter,
+  faDribbble,
+  faBehance,
+  faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = props => {
   const { pathname } = props.location;
@@ -38,46 +48,64 @@ const Header = props => {
                     <div className="header_social ml-auto">
                       <ul>
                         <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-pinterest"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
+                          <Link
+                            to={{
+                              pathname: "https://www.pinterest.com/"
+                            }}
+                            target="_blank"
+                          >
+                            <FontAwesomeIcon icon={faPinterest} />
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-facebook"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
+                          <Link
+                            to={{
+                              pathname: "https://www.facebook.com/"
+                            }}
+                            target="_blank"
+                          >
+                            <FontAwesomeIcon icon={faFacebook} />
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <i className="fa fa-twitter" aria-hidden="true"></i>
-                          </a>
+                          <Link
+                            to={{
+                              pathname: "https://twitter.com/"
+                            }}
+                            target="_blank"
+                          >
+                            <FontAwesomeIcon icon={faTwitter} />
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-dribbble"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
+                          <Link
+                            to={{
+                              pathname: "https://dribbble.com/"
+                            }}
+                            target="_blank"
+                          >
+                            <FontAwesomeIcon icon={faDribbble} />
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <i className="fa fa-behance" aria-hidden="true"></i>
-                          </a>
+                          <Link
+                            to={{
+                              pathname: "https://www.behance.net/"
+                            }}
+                            target="_blank"
+                          >
+                            <FontAwesomeIcon icon={faBehance} />
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-linkedin"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
+                          <Link
+                            to={{
+                              pathname: "https://www.linkedin.com/"
+                            }}
+                            target="_blank"
+                          >
+                            <FontAwesomeIcon icon={faLinkedin} />
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -134,7 +162,7 @@ const Header = props => {
                         </nav>
                         <div className="header_extra ml-auto">
                           <div className="header_search">
-                            <i className="fa fa-search" aria-hidden="true"></i>
+                            <FontAwesomeIcon icon={faSearch} />
                           </div>
                           <div className="button header_button">
                             <a href="#">Buy Tickets Now!</a>
@@ -162,7 +190,7 @@ const Header = props => {
                             required="required"
                           />
                           <button className="search_container_button">
-                            <i className="fa fa-search" aria-hidden="true"></i>
+                            <FontAwesomeIcon icon={faSearch} />
                           </button>
                         </form>
                       </div>
