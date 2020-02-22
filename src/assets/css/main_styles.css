@@ -889,7 +889,7 @@ section {
 	opacity: 1;
 }
 
-.intro_title a {
+.intro_title {
 	position: relative;
 	font-size: 24px;
 	font-weight: 500;
@@ -897,7 +897,7 @@ section {
 	z-index: 1;
 }
 
-.intro_item:hover .intro_title a,
+.intro_item:hover .intro_title,
 .intro_item:hover .intro_subtitle {
 	color: #FFFFFF;
 }

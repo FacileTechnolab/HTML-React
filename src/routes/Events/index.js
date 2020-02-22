@@ -11,6 +11,7 @@ const Events = props => {
 
   useEffect(() => {
     props.getEvent(1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -26,9 +27,9 @@ const Events = props => {
     for (let i = 1; i <= totalPage; i++) {
       list.push(
         <li key={i} className={activePage === i ? "active" : null}>
-          <a href="#" onClick={getEventPage.bind(this, i)}>
+          <Link to="/events" onClick={getEventPage.bind(this, i)}>
             {i < 10 ? "0" + i : i}.
-          </a>
+          </Link>
         </li>
       );
     }

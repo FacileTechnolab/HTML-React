@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { getEvent, getPricing, getIntro } from "../../redux/actions/home";
 import Intro from "./Intro";
@@ -16,6 +17,7 @@ const Home = props => {
     props.getEvent();
     props.getPricing();
     props.getIntro();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -44,10 +46,10 @@ const Home = props => {
                   </div>
                   <div className="home_buttons">
                     <div className="button home_button">
-                      <a href="#">Buy Tickets Now!</a>
+                      <Link to="/tickets">Buy Tickets Now!</Link>
                     </div>
                     <div className="button home_button">
-                      <a href="#">Find out more</a>
+                      <Link to="/events/1">Find out more</Link>
                     </div>
                   </div>
                 </div>

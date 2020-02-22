@@ -24,7 +24,7 @@ const Header = props => {
                 <div className="col">
                   <div className="header_top_content d-flex flex-row align-items-center justify-content-start">
                     <div>
-                      <a href="#">
+                      <Link to="/">
                         <div className="logo_container d-flex flex-row align-items-start justify-content-start">
                           <div className="logo_image">
                             <div>
@@ -43,7 +43,7 @@ const Header = props => {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                     <div className="header_social ml-auto">
                       <ul>
@@ -129,11 +129,11 @@ const Header = props => {
                             <li className={pathname === "/" ? "active" : ""}>
                               <Link to="/">Home</Link>
                             </li>
-                            <li
+                            {/* <li
                               className={pathname === "/about" ? "active" : ""}
                             >
                               <Link to="/about">About Us</Link>
-                            </li>
+                            </li> */}
                             <li
                               className={
                                 pathname === "/speakers" ? "active" : ""
@@ -165,7 +165,7 @@ const Header = props => {
                             <FontAwesomeIcon icon={faSearch} />
                           </div>
                           <div className="button header_button">
-                            <a href="#">Buy Tickets Now!</a>
+                            <Link to="/tickets">Buy Tickets Now!</Link>
                           </div>
                         </div>
                       </div>

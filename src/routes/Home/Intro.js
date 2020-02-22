@@ -7,9 +7,7 @@ function Intro(props) {
         <img src={props.image} alt="" />
       </div>
       <div className="intro_body">
-        <div className="intro_title">
-          <a href="#">{props.title}</a>
-        </div>
+        <div className="intro_title">{props.title}</div>
         <div className="intro_subtitle">{props.subtitle}</div>
       </div>
     </div>

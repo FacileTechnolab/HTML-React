@@ -24,7 +24,7 @@ const Footer = props => (
             <div className="cta_content text-center">
               <div className="cta_title">Get your tickets now!</div>
               <div className="button cta_button">
-                <a href="#">Find out more</a>
+                <Link to="/tickets">Find out more</Link>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@ const Footer = props => (
             <div className="col-lg-4 footer_col">
               <div className="footer_about">
                 <div>
-                  <a href="#">
+                  <Link to="/">
                     <div className="logo_container d-flex flex-row align-items-start justify-content-start">
                       <div className="logo_image">
                         <div>
@@ -57,7 +57,7 @@ const Footer = props => (
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="footer_about_text">
                   <p>
@@ -73,16 +73,16 @@ const Footer = props => (
             <div className="col-lg-3 footer_col">
               <div className="footer_links">
                 <ul>
-                  <li>
+                  {/* <li>
                     <a href="#">About Us</a>
                   </li>
                   <li>
                     <a href="#">Services</a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#">Speakers</a>
+                    <Link to="/speakers">Speakers</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#">Event Dates</a>
                   </li>
                   <li>
@@ -90,7 +90,7 @@ const Footer = props => (
                   </li>
                   <li>
                     <a href="#">Calendar</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Footer = props => (
             <div className="col-lg-3 footer_col">
               <div className="footer_links">
                 <ul>
-                  <li>
+                  {/* <li>
                     <a href="#">Logistics</a>
                   </li>
                   <li>
@@ -109,12 +109,12 @@ const Footer = props => (
                   </li>
                   <li>
                     <a href="#">Price Plans</a>
+                  </li> */}
+                  <li>
+                    <Link to="/news">News</Link>
                   </li>
                   <li>
-                    <a href="#">News</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
+                    <Link to="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -123,16 +123,16 @@ const Footer = props => (
             <div className="col-lg-2 footer_col">
               <div className="footer_links">
                 <ul>
-                  <li>
+                  {/*<li>
                     <a href="#">About Us</a>
                   </li>
-                  <li>
+                   <li>
                     <a href="#">Services</a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#">Speakers</a>
+                    <Link to="/speakers">Speakers</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#">Event Dates</a>
                   </li>
                   <li>
@@ -140,7 +140,7 @@ const Footer = props => (
                   </li>
                   <li>
                     <a href="#">Calendar</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -223,14 +223,14 @@ const Footer = props => (
                   <div className="footer_extra_links">
                     <ul>
                       <li>
-                        <a href="contact.html">Contact us</a>
+                        <Link to="/contact">Contact us</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="#">Sitemap</a>
                       </li>
                       <li>
                         <a href="#">Privacy</a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <div className="copyright">
@@ -240,9 +240,9 @@ const Footer = props => (
                     </script>{" "}
                     All rights reserved | This template is made with{" "}
                     <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-                    <a href="https://colorlib.com" target="_blank">
+                    <Link to="https://colorlib.com" target="_blank">
                       Colorlib
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

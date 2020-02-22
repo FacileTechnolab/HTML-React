@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PricingItem = props => (
   <div className="col-lg-4 pricing_col">
@@ -11,11 +12,9 @@ const PricingItem = props => (
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <div className="pricing_info">
-          <a href="#">i</a>
-        </div>
+        <div className="pricing_info">i</div>
         <div className="button pricing_button">
-          <a href="#">Order plan</a>
+          <Link to={`/orderPlan?plan=${props.id}`}>Order plan</Link>
         </div>
       </div>
     </div>

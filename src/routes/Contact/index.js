@@ -96,7 +96,7 @@ const ContactPage = props => {
             <div className="col-lg-5 offset-lg-1">
               <div className="contact_info_container">
                 <div>
-                  <a href="#">
+                  <Link to="/">
                     <div className="logo_container d-flex flex-row align-items-start justify-content-start">
                       <div className="logo_image">
                         <div>
@@ -115,7 +115,7 @@ const ContactPage = props => {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="contact_info_list_container">
                   <ul className="contact_info_list">
