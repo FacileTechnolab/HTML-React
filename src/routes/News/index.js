@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { getNews, getCategory, getLatestNews } from "../../redux/actions/news";
+import { getUrlParameter } from "../../utils";
 
 import News from "./News";
 import LatestNews from "./LatestNews";
@@ -14,6 +15,8 @@ const NewsPage = props => {
     activePage,
     categories,
     activeCategory,
+    activeAuthor,
+    activeAuthorName,
     latestNews
   } = props;
 
@@ -21,14 +24,33 @@ const NewsPage = props => {
     props.getNews(1);
     props.getCategory();
     props.getLatestNews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [activePage, activeCategory]);
+  }, [activePage, activeCategory, activeAuthor]);
 
-  const getNewsPage = (pageNo, category) => {
-    props.getNews(pageNo, category);
+  useEffect(() => {
+    const categoryId = parseInt(
+      getUrlParameter(props.location.search, "category")
+    );
+    if (!isNaN(categoryId)) {
+      props.getNews(1, categoryId);
+    } else {
+      const authorId = parseInt(
+        getUrlParameter(props.location.search, "author")
+      );
+
+      if (!isNaN(authorId)) {
+        props.getNews(1, null, authorId);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.location.search]);
+
+  const getNewsPage = (pageNo, category, author) => {
+    props.getNews(pageNo, category, author);
   };
 
   const getPageList = () => {
@@ -84,6 +106,9 @@ const NewsPage = props => {
               {categories.find(item => item.id === activeCategory).title}
             </h4>
           )}
+          {activeAuthor && (
+            <h4 style={{ marginTop: "-10px" }}>Author > {activeAuthorName}</h4>
+          )}
           <div className="row">
             <div className="col-lg-8">
               <div className="news_items">
@@ -110,10 +135,10 @@ const NewsPage = props => {
                       etur adipisi cing elit. Perferendis id explica bo.
                     </div>
                     <div className="tickets_next">
-                      <a href="#">See Next Event</a>
+                      <Link to="/events">See Next Event</Link>
                     </div>
                     <div className="button tickets_button">
-                      <a href="#">Buy Tickets Now!</a>
+                      <Link to={`/tickets?event=1`}>Buy Tickets Now!</Link>
                     </div>
                   </div>
                 </div>
@@ -153,6 +178,8 @@ const NewsPage = props => {
 const mapStateToProps = store => ({
   news: store.news.news,
   activeCategory: store.news.activeCategory,
+  activeAuthor: store.news.activeAuthor,
+  activeAuthorName: store.news.activeAuthorName,
   totalPage: store.news.totalPage,
   activePage: store.news.activePage,
   categories: store.news.categories,
@@ -161,7 +188,8 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => ({
   getCategory: () => dispatch(getCategory()),
-  getNews: (pageNo, category) => dispatch(getNews(pageNo, category)),
+  getNews: (pageNo, category, author) =>
+    dispatch(getNews(pageNo, category, author)),
   getLatestNews: () => dispatch(getLatestNews())
 });
 

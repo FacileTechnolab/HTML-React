@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Speaker(props) {
   return (
@@ -19,7 +20,9 @@ function Speaker(props) {
                 <p>{props.desc}</p>
               </div>
               <div className="button speaker_button">
-                <a href="#">Buy Tickets Now!</a>
+                <Link to={`/tickets?speaker=${props.id}`}>
+                  Buy Tickets Now!
+                </Link>
               </div>
             </div>
           </div>
@@ -34,7 +37,9 @@ function Speaker(props) {
                 <p>{props.desc}</p>
               </div>
               <div className="button speaker_button">
-                <a href="#">Buy Tickets Now!</a>
+                <Link to={`/tickets?speaker=${props.id}`}>
+                  Buy Tickets Now!
+                </Link>
               </div>
             </div>
           </div>

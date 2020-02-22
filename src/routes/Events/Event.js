@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Event = props => (
   <div className="event">
@@ -10,12 +11,10 @@ const Event = props => (
             style={{ backgroundImage: `url(${props.image})` }}
           ></div>
           <div className="date_container">
-            <a href="#">
-              <span className="date_content d-flex flex-column align-items-center justify-content-center">
-                <div className="date_day">{props.day}</div>
-                <div className="date_month">{props.month}</div>
-              </span>
-            </a>
+            <span className="date_content d-flex flex-column align-items-center justify-content-center">
+              <div className="date_day">{props.day}</div>
+              <div className="date_month">{props.month}</div>
+            </span>
           </div>
         </div>
       </div>
@@ -46,10 +45,10 @@ const Event = props => (
           </div>
           <div className="event_buttons">
             <div className="button event_button event_button_1">
-              <a href="#">Buy Tickets Now!</a>
+              <Link to={`/tickets?event=${props.id}`}>Buy Tickets Now!</Link>
             </div>
             <div className="button_2 event_button event_button_2">
-              <a href="#">Read more</a>
+              <Link to={`/events/${props.id}`}>Read more</Link>
             </div>
           </div>
         </div>

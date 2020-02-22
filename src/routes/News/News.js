@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const News = props => (
   <div className="news_item">
@@ -7,17 +8,15 @@ const News = props => (
         <img src={props.image} alt="news_image" />
       </div>
       <div className="date_container">
-        <a href="#">
-          <span className="date_content d-flex flex-column align-items-center justify-content-center">
-            <div className="date_day">{props.day}</div>
-            <div className="date_month">{props.month}</div>
-          </span>
-        </a>
+        <span className="date_content d-flex flex-column align-items-center justify-content-center">
+          <div className="date_day">{props.day}</div>
+          <div className="date_month">{props.month}</div>
+        </span>
       </div>
     </div>
     <div className="news_body">
       <div className="news_title">
-        <a href="#">{props.title}</a>
+        <Link to={`/news/${props.id}`}>{props.title}</Link>
       </div>
       <div className="news_info">
         <ul>
@@ -26,29 +25,35 @@ const News = props => (
               <img src={props.author.image} alt="news_auther" />
             </div>
             <span>
-              by <a href="#">{props.author.name}</a>
+              by{" "}
+              <Link to={`/news?author=${props.author.id}`}>
+                {props.author.name}
+              </Link>
             </span>
           </li>
 
           <li>
             <span>
               in{" "}
-              <a href="events.html">
-                {props.tags.map(item => item.title).join(", ")}
-              </a>
+              {props.tags.map((item, index, array) => (
+                <Fragment key={index}>
+                  <Link key={index} to={`/news?category=${item.id}`}>
+                    {item.title}
+                  </Link>
+                  {index < array.length - 1 && ", "}
+                </Fragment>
+              ))}
             </span>
           </li>
 
-          <li>
-            <a href="#">{props.comments}</a>
-          </li>
+          <li>{props.comments}</li>
         </ul>
       </div>
       <div className="news_text">
         <p>{props.desc}</p>
       </div>
       <div className="button news_button">
-        <a href="#">Read More</a>
+        <Link to={`/news/${props.id}`}>Read More</Link>
       </div>
     </div>
   </div>

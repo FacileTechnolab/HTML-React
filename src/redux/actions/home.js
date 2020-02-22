@@ -81,6 +81,7 @@ const PRICING_LIST = [
 
 const EVENT_LIST = [
   {
+    id: "111",
     time: "14:00",
     place: "Auditorium",
     title: "Business 101",
@@ -90,6 +91,7 @@ const EVENT_LIST = [
     date: 22
   },
   {
+    id: "112",
     time: "15:00",
     place: "Auditorium",
     title: "About technology",
@@ -99,6 +101,7 @@ const EVENT_LIST = [
     date: 22
   },
   {
+    id: "113",
     time: "17:00",
     place: "Auditorium",
     title: "Conference calls",
@@ -108,6 +111,7 @@ const EVENT_LIST = [
     date: 22
   },
   {
+    id: "114",
     time: "20:00",
     place: "Auditorium",
     title: "Drinks and dinner",
@@ -117,6 +121,7 @@ const EVENT_LIST = [
     date: 22
   },
   {
+    id: "115",
     time: "14:00",
     place: "Auditorium",
     title: "Business 101",
@@ -126,6 +131,7 @@ const EVENT_LIST = [
     date: 23
   },
   {
+    id: "116",
     time: "15:00",
     place: "Auditorium",
     title: "About technology",
@@ -135,6 +141,7 @@ const EVENT_LIST = [
     date: 23
   },
   {
+    id: "117",
     time: "17:00",
     place: "Auditorium",
     title: "Conference calls",
@@ -144,6 +151,7 @@ const EVENT_LIST = [
     date: 23
   },
   {
+    id: "118",
     time: "20:00",
     place: "Auditorium",
     title: "Drinks and dinner",

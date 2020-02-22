@@ -9,6 +9,7 @@ import Speaker from "./Speaker";
 function Speakers(props) {
   useEffect(() => {
     props.getSpeakers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const speakerComponentList = props.speakers.map(item => (

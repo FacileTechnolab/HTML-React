@@ -1,1 +1,2 @@
 export const EVENTS_GET_EVENTS = "EVENTS_GET_EVENTS";
+export const GET_EVENT_ITEM = "GET_EVENT_ITEM";

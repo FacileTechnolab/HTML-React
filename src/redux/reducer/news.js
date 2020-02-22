@@ -1,12 +1,20 @@
-import { GET_NEWS, GET_CATEGORIES, GET_LATEST_NEWS } from "../type/news";
+import {
+  GET_NEWS,
+  GET_CATEGORIES,
+  GET_LATEST_NEWS,
+  GET_NEWS_ITEM
+} from "../type/news";
 
 const initialState = {
   categories: [],
   news: [],
   latestNews: [],
+  activeNews: null,
   totalPage: 0,
   activePage: 0,
-  activeCategory: null
+  activeCategory: null,
+  activeAuthor: null,
+  activeAuthorName: null
 };
 
 export const newsReducer = (state = initialState, action) => {
@@ -27,6 +35,11 @@ export const newsReducer = (state = initialState, action) => {
       return {
         ...state,
         latestNews: [...action.payload]
+      };
+    case GET_NEWS_ITEM:
+      return {
+        ...state,
+        activeNews: { ...action.payload }
       };
     default:
       return state;

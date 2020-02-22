@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LatestNews = props => (
   <div className="latest d-flex flex-row align-items-start justify-content-start">
@@ -9,7 +10,7 @@ const LatestNews = props => (
     </div>
     <div className="latest_content">
       <div className="latest_title">
-        <a href="#">{props.title}</a>
+        <Link to={`/news/${props.id}`}>{props.title}</Link>
       </div>
       <div className="latest_date">{props.date}</div>
     </div>

@@ -1,4 +1,9 @@
-import { GET_CATEGORIES, GET_NEWS, GET_LATEST_NEWS } from "../type/news";
+import {
+  GET_CATEGORIES,
+  GET_NEWS,
+  GET_LATEST_NEWS,
+  GET_NEWS_ITEM
+} from "../type/news";
 
 const CATEGORIES_LIST = [
   {
@@ -32,7 +37,8 @@ const NEWS_LIST = [
     title: "10 Tips to start your small business",
     author: {
       image: "/images/news_author_1.jpg",
-      name: "Michael Smith"
+      name: "Michael Smith",
+      id: 11
     },
     tags: [
       {
@@ -56,7 +62,8 @@ const NEWS_LIST = [
     title: "Ideas for a better online marketing campaign",
     author: {
       image: "/images/news_author_1.jpg",
-      name: "Michael Smith"
+      name: "Michael Smith",
+      id: 11
     },
     tags: [
       {
@@ -80,7 +87,8 @@ const NEWS_LIST = [
     title: "Tips to have an amazing conefrence call",
     author: {
       image: "/images/news_author_1.jpg",
-      name: "Michael Smith"
+      name: "Michael Smith",
+      id: 11
     },
     tags: [
       {
@@ -124,17 +132,24 @@ export const getCategory = () => ({
   payload: CATEGORIES_LIST
 });
 
-export const getNews = (pageNo, category) => ({
+export const getNews = (pageNo, category, author) => ({
   type: GET_NEWS,
   payload: {
     items: NEWS_LIST,
     totalPage: 3,
     activePage: pageNo,
-    activeCategory: category
+    activeCategory: category,
+    activeAuthor: author,
+    activeAuthorName: author && "Michael Smith"
   }
 });
 
 export const getLatestNews = () => ({
   type: GET_LATEST_NEWS,
   payload: LATEST_NEWS
+});
+
+export const getNewsItem = id => ({
+  type: GET_NEWS_ITEM,
+  payload: NEWS_LIST.find(item => item.id === id)
 });

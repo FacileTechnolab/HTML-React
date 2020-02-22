@@ -1,4 +1,4 @@
-import { EVENTS_GET_EVENTS } from "../type/events";
+import { EVENTS_GET_EVENTS, GET_EVENT_ITEM } from "../type/events";
 
 const EVENT_LIST = [
   {
@@ -76,4 +76,9 @@ export const getEvent = pageNo => ({
     totalPage: 3,
     activePage: pageNo
   }
+});
+
+export const getEventItem = id => ({
+  type: GET_EVENT_ITEM,
+  payload: EVENT_LIST.find(item => item.id === id)
 });

@@ -3,6 +3,7 @@ import { GET_SPEAKERS } from "../type/speakers";
 const SPEAKERS_LIST = [
   {
     order: 1,
+    id: 12,
     name: "William Smith",
     designation: "Marketing Specialist",
     desc:
@@ -11,6 +12,7 @@ const SPEAKERS_LIST = [
   },
   {
     order: 2,
+    id: 13,
     name: "Lidia Maria Parker",
     designation: "Marketing Specialist",
     desc:
@@ -19,6 +21,7 @@ const SPEAKERS_LIST = [
   },
   {
     order: 3,
+    id: 14,
     name: "James Morrison",
     designation: "Marketing Specialist",
     desc:
@@ -27,6 +30,7 @@ const SPEAKERS_LIST = [
   },
   {
     order: 4,
+    id: 15,
     name: "Patricia Freeman",
     designation: "Marketing Specialist",
     desc:
