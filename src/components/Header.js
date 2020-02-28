@@ -50,6 +50,16 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
+                              pathname: "https://www.faciletechnolab.com/"
+                            }}
+                            target="_blank"
+                          >
+                            <span className="facile-logo"></span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={{
                               pathname: "https://www.pinterest.com/"
                             }}
                             target="_blank"

@@ -30,3 +30,10 @@
 .speaker-header {
   margin-top: -167px;
 }
+
+.facile-logo {
+  height: 1em;
+  width: 1em;
+  background-image: url("../images/facile.png");
+  display: block;
+}

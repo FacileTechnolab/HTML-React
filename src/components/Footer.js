@@ -9,8 +9,9 @@ import {
   faBehance,
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-const Footer = props => (
+const Footer = () => (
   <>
     <div className="cta">
       <img
@@ -73,75 +74,32 @@ const Footer = props => (
             <div className="col-lg-3 footer_col">
               <div className="footer_links">
                 <ul>
-                  {/* <li>
-                    <a href="#">About Us</a>
-                  </li>
-                  <li>
-                    <a href="#">Services</a>
-                  </li> */}
                   <li>
                     <Link to="/speakers">Speakers</Link>
                   </li>
-                  {/* <li>
-                    <a href="#">Event Dates</a>
-                  </li>
-                  <li>
-                    <a href="#">Information</a>
-                  </li>
-                  <li>
-                    <a href="#">Calendar</a>
-                  </li> */}
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-3 footer_col">
-              <div className="footer_links">
-                <ul>
-                  {/* <li>
-                    <a href="#">Logistics</a>
-                  </li>
-                  <li>
-                    <a href="#">Our Partners</a>
-                  </li>
-                  <li>
-                    <a href="#">Testimonials</a>
-                  </li>
-                  <li>
-                    <a href="#">Price Plans</a>
-                  </li> */}
                   <li>
                     <Link to="/news">News</Link>
                   </li>
                   <li>
                     <Link to="/contact">Contact</Link>
                   </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-2 footer_col">
-              <div className="footer_links">
-                <ul>
-                  {/*<li>
-                    <a href="#">About Us</a>
-                  </li>
-                   <li>
-                    <a href="#">Services</a>
-                  </li> */}
                   <li>
                     <Link to="/speakers">Speakers</Link>
                   </li>
-                  {/* <li>
-                    <a href="#">Event Dates</a>
-                  </li>
                   <li>
-                    <a href="#">Information</a>
+                    <Link to="/contact">Contact us</Link>
                   </li>
-                  <li>
-                    <a href="#">Calendar</a>
-                  </li> */}
                 </ul>
+              </div>
+            </div>
+            <div className="col-lg-3 footer_col">
+              <div className="footer_links">
+                <ul></ul>
+              </div>
+            </div>
+            <div className="col-lg-2 footer_col">
+              <div className="footer_links">
+                <ul></ul>
               </div>
             </div>
           </div>
@@ -160,11 +118,21 @@ const Footer = props => (
                     <li>
                       <Link
                         to={{
+                          pathname: "https://www.faciletechnolab.com/"
+                        }}
+                        target="_blank"
+                      >
+                        <span className="facile-logo"></span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={{
                           pathname: "https://www.pinterest.com/"
                         }}
                         target="_blank"
                       >
-                        <FontAwesomeIcon icon={faPinterest} />
+                        <FontAwesomeIcon icon={faPinterest} color="white" />
                       </Link>
                     </li>
                     <li>
@@ -174,7 +142,7 @@ const Footer = props => (
                         }}
                         target="_blank"
                       >
-                        <FontAwesomeIcon icon={faFacebook} />
+                        <FontAwesomeIcon icon={faFacebook} color="white" />
                       </Link>
                     </li>
                     <li>
@@ -184,7 +152,7 @@ const Footer = props => (
                         }}
                         target="_blank"
                       >
-                        <FontAwesomeIcon icon={faTwitter} />
+                        <FontAwesomeIcon icon={faTwitter} color="white" />
                       </Link>
                     </li>
                     <li>
@@ -194,7 +162,7 @@ const Footer = props => (
                         }}
                         target="_blank"
                       >
-                        <FontAwesomeIcon icon={faDribbble} />
+                        <FontAwesomeIcon icon={faDribbble} color="white" />
                       </Link>
                     </li>
                     <li>
@@ -204,7 +172,7 @@ const Footer = props => (
                         }}
                         target="_blank"
                       >
-                        <FontAwesomeIcon icon={faBehance} />
+                        <FontAwesomeIcon icon={faBehance} color="white" />
                       </Link>
                     </li>
                     <li>
@@ -214,34 +182,39 @@ const Footer = props => (
                         }}
                         target="_blank"
                       >
-                        <FontAwesomeIcon icon={faLinkedin} />
+                        <FontAwesomeIcon icon={faLinkedin} color="white" />
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div className="footer_extra_right ml-lg-auto text-lg-right">
                   <div className="footer_extra_links">
-                    <ul>
-                      <li>
-                        <Link to="/contact">Contact us</Link>
-                      </li>
-                      {/* <li>
-                        <a href="#">Sitemap</a>
-                      </li>
-                      <li>
-                        <a href="#">Privacy</a>
-                      </li> */}
-                    </ul>
+                    <ul></ul>
                   </div>
                   <div className="copyright">
                     Copyright &copy;
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>{" "}
-                    All rights reserved | This template is made with{" "}
+                    {new Date().getFullYear() + " "}
+                    All rights reserved | This template is made with
                     <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-                    <Link to="https://colorlib.com" target="_blank">
+                    <Link
+                      to={{
+                        pathname: "https://colorlib.com"
+                      }}
+                      target="_blank"
+                    >
                       Colorlib
+                    </Link>
+                  </div>
+                  <div className="copyright">
+                    This template is converted with{" "}
+                    <FontAwesomeIcon icon={faHeart} /> by{" "}
+                    <Link
+                      to={{
+                        pathname: "https://www.faciletechnolab.com/"
+                      }}
+                      target="_blank"
+                    >
+                      FacileTechnolab
                     </Link>
                   </div>
                 </div>
