@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import GoogleMapReact from "google-map-react";
+import { Map, GoogleApiWrapper } from "google-maps-react";
 
 const ContactPage = props => {
+  console.log("pdsdfsdf", process.env);
   return (
     <>
       <div className="speaker-header">
@@ -40,17 +40,13 @@ const ContactPage = props => {
             <div className="map">
               <div id="google_map" className="google_map">
                 <div className="map_container">
-                  <div id="map"></div>
-                  <GoogleMapReact
-                    bootstrapURLKeys={{
-                      key: "AIzaSyChPExYa_WzSVL66RhlDFzJz5XDVN0wX8k"
-                    }}
-                    defaultCenter={{
-                      lat: 34.043238,
-                      long: -118.258338
-                    }}
-                    defaultZoom={13}
-                  />
+                  <div id="map">
+                    <Map
+                      google={props.google}
+                      zoom={13}
+                      center={{ lat: 34.043238, long: -118.258338 }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -161,8 +157,6 @@ const ContactPage = props => {
   );
 };
 
-const mapStateToProps = store => ({});
-
-const mapDispatchToProps = dispatch => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ContactPage);
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyD5EyD7zuY-GVQb748rXqbk0s_Dby5J0DA"
+})(ContactPage);
