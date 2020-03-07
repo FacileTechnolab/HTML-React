@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
 const ContactPage = props => {
-  console.log("pdsdfsdf", process.env);
   return (
     <>
       <div className="speaker-header">
