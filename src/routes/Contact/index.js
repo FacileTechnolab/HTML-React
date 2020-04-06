@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
-const ContactPage = props => {
+const ContactPage = (props) => {
   return (
     <>
       <div className="speaker-header">
@@ -17,13 +17,13 @@ const ContactPage = props => {
               <div className="row">
                 <div className="col">
                   <div className="d-flex flex-row align-items-end justify-content-start">
-                    <div className="current_page">News</div>
+                    <div className="current_page">Contact</div>
                     <div className="breadcrumbs ml-auto">
                       <ul>
                         <li>
                           <Link to="/">Home</Link>
                         </li>
-                        <li>News</li>
+                        <li>Contact</li>
                       </ul>
                     </div>
                   </div>
@@ -157,5 +157,5 @@ const ContactPage = props => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyD5EyD7zuY-GVQb748rXqbk0s_Dby5J0DA"
+  apiKey: "AIzaSyD5EyD7zuY-GVQb748rXqbk0s_Dby5J0DA",
 })(ContactPage);

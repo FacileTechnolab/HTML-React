@@ -1,15 +1,15 @@
-@import url('./contact.css');
-@import url('./contact_responsive.css');
-@import url('./elements.css');
-@import url('./elements_responsive.css');
-@import url('./events.css');
-@import url('./events_responsive.css');
-@import url('./news.css');
-@import url('./news_responsive.css');
-@import url('./speakers.css');
-@import url('./speakers_responsive.css');
-@import url('./main_styles.css');
-@import url('./responsive.css');
+@import url("./contact.css");
+@import url("./contact_responsive.css");
+@import url("./elements.css");
+@import url("./elements_responsive.css");
+@import url("./events.css");
+@import url("./events_responsive.css");
+@import url("./news.css");
+@import url("./news_responsive.css");
+@import url("./speakers.css");
+@import url("./speakers_responsive.css");
+@import url("./main_styles.css");
+@import url("./responsive.css");
 
 .home-image-container {
   height: 448px;
@@ -18,6 +18,10 @@
 
 .home-image-content-container {
   padding-top: 70px;
+}
+
+.speakers .row {
+  margin: 0px;
 }
 
 .speaker_content_container {
