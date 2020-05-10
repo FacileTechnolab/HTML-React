@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,16 +7,53 @@ import {
   faTwitter,
   faDribbble,
   faBehance,
-  faLinkedin
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const Header = props => {
+import DownloadModal from "./DownloadModal";
+
+const Header = (props) => {
   const { pathname } = props.location;
+
+  const [showModal, setShowModal] = useState(false);
+  const [showDownloadBar, setShowDownloadBar] = useState(false);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const hideDownloadBar = () => {
+    setShowDownloadBar(false);
+    localStorage.setItem("code_download", "true");
+  };
+
+  useEffect(() => {
+    const data = localStorage.getItem("code_download");
+    if (!data) {
+      setShowDownloadBar(true);
+    }
+  }, []);
 
   return (
     <div className="home">
-      <header className="header" id="header">
+      {showDownloadBar && (
+        <div
+          className="alert alert-info download-header text-center"
+          role="alert"
+        >
+          Like what you see? You can receive react app source code for this app
+          free
+          <button
+            type="button"
+            className="ml-2 btn btn-danger btn-sm"
+            onClick={() => setShowModal(true)}
+          >
+            Save Now
+          </button>
+        </div>
+      )}
+      <header className="header" id="header" style={{ top: "55px" }}>
         <div>
           <div className="header_top">
             <div className="container">
@@ -50,7 +87,7 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
-                              pathname: "https://www.faciletechnolab.com/"
+                              pathname: "https://www.faciletechnolab.com/",
                             }}
                             target="_blank"
                           >
@@ -60,7 +97,7 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
-                              pathname: "https://www.pinterest.com/"
+                              pathname: "https://www.pinterest.com/",
                             }}
                             target="_blank"
                           >
@@ -70,7 +107,7 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
-                              pathname: "https://www.facebook.com/"
+                              pathname: "https://www.facebook.com/",
                             }}
                             target="_blank"
                           >
@@ -80,7 +117,7 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
-                              pathname: "https://twitter.com/"
+                              pathname: "https://twitter.com/",
                             }}
                             target="_blank"
                           >
@@ -90,7 +127,7 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
-                              pathname: "https://dribbble.com/"
+                              pathname: "https://dribbble.com/",
                             }}
                             target="_blank"
                           >
@@ -100,7 +137,7 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
-                              pathname: "https://www.behance.net/"
+                              pathname: "https://www.behance.net/",
                             }}
                             target="_blank"
                           >
@@ -110,7 +147,7 @@ const Header = props => {
                         <li>
                           <Link
                             to={{
-                              pathname: "https://www.linkedin.com/"
+                              pathname: "https://www.linkedin.com/",
                             }}
                             target="_blank"
                           >
@@ -212,6 +249,11 @@ const Header = props => {
           </div>
         </div>
       </header>
+      <DownloadModal
+        showModal={showModal}
+        closeModal={closeModal}
+        hideDownloadBar={hideDownloadBar}
+      />
     </div>
   );
 };

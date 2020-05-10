@@ -41,3 +41,11 @@
   background-image: url("../images/facile.png");
   display: block;
 }
+
+.download-header {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
