@@ -25,6 +25,7 @@ const Header = (props) => {
 
   const hideDownloadBar = () => {
     setShowDownloadBar(false);
+    setShowModal(false);
     localStorage.setItem("code_download", "true");
   };
 
@@ -53,7 +54,11 @@ const Header = (props) => {
           </button>
         </div>
       )}
-      <header className="header" id="header" style={{ top: "55px" }}>
+      <header
+        className="header"
+        id="header"
+        style={{ top: showDownloadBar ? "55px" : "0px" }}
+      >
         <div>
           <div className="header_top">
             <div className="container">
