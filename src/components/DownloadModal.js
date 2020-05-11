@@ -8,7 +8,7 @@ const DownloadModal = (props) => {
   const [hasError, setHasError] = useState(false);
   const [validEmail, setValidEmail] = useState(true);
 
-  const { showModal, closeModal, hideDownloadBar } = props;
+  const { modalType, showModal, closeModal, hideDownloadBar } = props;
 
   const validateEmail = (text) => {
     const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -57,26 +57,27 @@ const DownloadModal = (props) => {
           firstname: firstName,
           lastname: lastName,
           email: email,
+          segment3: modalType,
         }),
-      })
-        .then((res) => res.json())
-        .then(
-          (result) => {
-            hideDownloadBar();
+      }).then((result) => {
+        if (result.status === 201) {
+          hideDownloadBar();
+          if (modalType === "download")
             window.open(
               "https://github.com/FacileTechnolab/FacileTechnolab.github.io/releases/download/1.0/HTML-React-develop.zip",
               "_blank"
             );
-          },
-          (error) => {}
-        );
+        }
+      });
     }
   };
 
   return (
     <Modal show={showModal} onHide={closeModal}>
       <Modal.Header closeButton>
-        <Modal.Title>Download Code</Modal.Title>
+        <Modal.Title>
+          {modalType === "download" ? "Download React Theme" : "Hire Us"}
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
@@ -127,17 +128,9 @@ const DownloadModal = (props) => {
             </Col>
           </Form.Row>
         </Form>
-        <div className="d-flex flex-row-reverse mt-3">
+        <div className="d-flex justify-content-center mt-3">
           <Button className="ml-2" type="submit" onClick={handleSubmit}>
-            Download
-          </Button>
-          <Button
-            className="ml-2"
-            type="submit"
-            variant="secondary"
-            onClick={closeModal}
-          >
-            Close
+            Submit
           </Button>
         </div>
       </Modal.Body>

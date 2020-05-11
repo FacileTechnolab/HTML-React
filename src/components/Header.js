@@ -17,16 +17,24 @@ const Header = (props) => {
   const { pathname } = props.location;
 
   const [showModal, setShowModal] = useState(false);
+  const [modalType, setModalType] = useState("");
   const [showDownloadBar, setShowDownloadBar] = useState(false);
 
   const closeModal = () => {
     setShowModal(false);
+    setModalType("");
   };
 
   const hideDownloadBar = () => {
     setShowDownloadBar(false);
     setShowModal(false);
+    setModalType("");
     localStorage.setItem("code_download", "true");
+  };
+
+  const openModal = (type) => {
+    setShowModal(true);
+    setModalType(type);
   };
 
   useEffect(() => {
@@ -48,9 +56,16 @@ const Header = (props) => {
           <button
             type="button"
             className="ml-2 btn btn-danger btn-sm"
-            onClick={() => setShowModal(true)}
+            onClick={() => openModal("download")}
           >
-            Save Now
+            Download
+          </button>
+          <button
+            type="button"
+            className="ml-2 btn btn-danger btn-sm"
+            onClick={() => openModal("hireus")}
+          >
+            Hire Us
           </button>
         </div>
       )}
@@ -256,6 +271,7 @@ const Header = (props) => {
       </header>
       <DownloadModal
         showModal={showModal}
+        modalType={modalType}
         closeModal={closeModal}
         hideDownloadBar={hideDownloadBar}
       />
