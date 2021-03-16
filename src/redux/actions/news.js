@@ -31,12 +31,12 @@ const CATEGORIES_LIST = [
 const NEWS_LIST = [
   {
     id: 1,
-    image: "/images/news_1.jpg",
+    image: "/react/images/news_1.jpg",
     day: 15,
     month: "May",
     title: "10 Tips to start your small business",
     author: {
-      image: "/images/news_author_1.jpg",
+      image: "/react/images/news_author_1.jpg",
       name: "Michael Smith",
       id: 11
     },
@@ -56,12 +56,12 @@ const NEWS_LIST = [
   },
   {
     id: 2,
-    image: "/images/news_2.jpg",
+    image: "/react/images/news_2.jpg",
     day: 16,
     month: "May",
     title: "Ideas for a better online marketing campaign",
     author: {
-      image: "/images/news_author_1.jpg",
+      image: "/react/images/news_author_1.jpg",
       name: "Michael Smith",
       id: 11
     },
@@ -81,12 +81,12 @@ const NEWS_LIST = [
   },
   {
     id: 3,
-    image: "/images/news_3.jpg",
+    image: "/react/images/news_3.jpg",
     day: 18,
     month: "May",
     title: "Tips to have an amazing conefrence call",
     author: {
-      image: "/images/news_author_1.jpg",
+      image: "/react/images/news_author_1.jpg",
       name: "Michael Smith",
       id: 11
     },
@@ -109,19 +109,19 @@ const NEWS_LIST = [
 const LATEST_NEWS = [
   {
     id: 1,
-    image: "/images/latest_1.jpg",
+    image: "/react/images/latest_1.jpg",
     title: "A big discovery in science",
     date: "April 02, 2017"
   },
   {
     id: 2,
-    image: "/images/latest_2.jpg",
+    image: "/react/images/latest_2.jpg",
     title: "Marketing for everybody",
     date: "May 03, 2017"
   },
   {
     id: 3,
-    image: "/images/latest_3.jpg",
+    image: "/react/images/latest_3.jpg",
     title: "New ways to improve ypurself",
     date: "May 03, 2017"
   }

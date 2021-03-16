@@ -46,10 +46,10 @@ const Home = props => {
                   </div>
                   <div className="home_buttons">
                     <div className="button home_button">
-                      <Link to="/tickets">Buy Tickets Now!</Link>
+                      <Link to={`${process.env.PUBLIC_URL}/tickets`}>Buy Tickets Now!</Link>
                     </div>
                     <div className="button home_button">
-                      <Link to="/events/1">Find out more</Link>
+                      <Link to={`${process.env.PUBLIC_URL}/events/1`}>Find out more</Link>
                     </div>
                   </div>
                 </div>

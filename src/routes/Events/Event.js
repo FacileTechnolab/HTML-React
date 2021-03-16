@@ -45,10 +45,10 @@ const Event = props => (
           </div>
           <div className="event_buttons">
             <div className="button event_button event_button_1">
-              <Link to={`/tickets?event=${props.id}`}>Buy Tickets Now!</Link>
+              <Link to={`${process.env.PUBLIC_URL}/tickets?event=${props.id}`}>Buy Tickets Now!</Link>
             </div>
             <div className="button_2 event_button event_button_2">
-              <Link to={`/events/${props.id}`}>Read more</Link>
+              <Link to={`${process.env.PUBLIC_URL}/events/${props.id}`}>Read more</Link>
             </div>
           </div>
         </div>

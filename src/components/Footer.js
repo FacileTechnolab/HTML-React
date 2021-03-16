@@ -16,7 +16,7 @@ const Footer = () => (
     <div className="cta">
       <img
         className="parallax_background parallax-window"
-        src="/images/cta_1.jpg"
+        src={`${process.env.PUBLIC_URL}/react/images/cta_1.jpg`}
         alt="ata_1"
       />
       <div className="container">
@@ -25,7 +25,7 @@ const Footer = () => (
             <div className="cta_content text-center">
               <div className="cta_title">Get your tickets now!</div>
               <div className="button cta_button">
-                <Link to="/tickets">Find out more</Link>
+                <Link to={`${process.env.PUBLIC_URL}/tickets`}>Find out more</Link>
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => (
             <div className="col-lg-4 footer_col">
               <div className="footer_about">
                 <div>
-                  <Link to="/">
+                  <Link to={`${process.env.PUBLIC_URL}/`}>
                     <div className="logo_container d-flex flex-row align-items-start justify-content-start">
                       <div className="logo_image">
                         <div>
@@ -75,19 +75,19 @@ const Footer = () => (
               <div className="footer_links">
                 <ul>
                   <li>
-                    <Link to="/speakers">Speakers</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/speakers`}>Speakers</Link>
                   </li>
                   <li>
-                    <Link to="/news">News</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/news`}>News</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link>
                   </li>
                   <li>
-                    <Link to="/speakers">Speakers</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/speakers`}>Speakers</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact us</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact us</Link>
                   </li>
                 </ul>
               </div>

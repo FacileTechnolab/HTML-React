@@ -16,7 +16,7 @@ const News = props => (
     </div>
     <div className="news_body">
       <div className="news_title">
-        <Link to={`/news/${props.id}`}>{props.title}</Link>
+        <Link to={`${process.env.PUBLIC_URL}/news/${props.id}`}>{props.title}</Link>
       </div>
       <div className="news_info">
         <ul>
@@ -26,7 +26,7 @@ const News = props => (
             </div>
             <span>
               by{" "}
-              <Link to={`/news?author=${props.author.id}`}>
+              <Link to={`${process.env.PUBLIC_URL}/news?author=${props.author.id}`}>
                 {props.author.name}
               </Link>
             </span>
@@ -37,7 +37,7 @@ const News = props => (
               in{" "}
               {props.tags.map((item, index, array) => (
                 <Fragment key={index}>
-                  <Link key={index} to={`/news?category=${item.id}`}>
+                  <Link key={index} to={`${process.env.PUBLIC_URL}/news?category=${item.id}`}>
                     {item.title}
                   </Link>
                   {index < array.length - 1 && ", "}
@@ -53,7 +53,7 @@ const News = props => (
         <p>{props.desc}</p>
       </div>
       <div className="button news_button">
-        <Link to={`/news/${props.id}`}>Read More</Link>
+        <Link to={`${process.env.PUBLIC_URL}/news/${props.id}`}>Read More</Link>
       </div>
     </div>
   </div>

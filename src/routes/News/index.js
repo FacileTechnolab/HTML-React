@@ -58,7 +58,7 @@ const NewsPage = props => {
     for (let i = 1; i <= totalPage; i++) {
       list.push(
         <li key={i} className={activePage === i ? "active" : null}>
-          <Link to="/news" onClick={getNewsPage.bind(this, i, activeCategory)}>
+          <Link to={`${process.env.PUBLIC_URL}/news`} onClick={getNewsPage.bind(this, i, activeCategory)}>
             {i < 10 ? "0" + i : i}.
           </Link>
         </li>
@@ -74,7 +74,7 @@ const NewsPage = props => {
         <div className="home-image-container">
           <img
             className="parallax_background parallax-window"
-            src="/images/news.jpg"
+            src={`${process.env.PUBLIC_URL}/react/images/news.jpg`}
             alt="events"
           ></img>
           <div className="speaker_content_container">
@@ -86,7 +86,7 @@ const NewsPage = props => {
                     <div className="breadcrumbs ml-auto">
                       <ul>
                         <li>
-                          <Link to="/">Home</Link>
+                          <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
                         </li>
                         <li>News</li>
                       </ul>
@@ -135,10 +135,10 @@ const NewsPage = props => {
                       etur adipisi cing elit. Perferendis id explica bo.
                     </div>
                     <div className="tickets_next">
-                      <Link to="/events">See Next Event</Link>
+                      <Link to={`${process.env.PUBLIC_URL}/events}`}>See Next Event</Link>
                     </div>
                     <div className="button tickets_button">
-                      <Link to={`/tickets?event=1`}>Buy Tickets Now!</Link>
+                      <Link to={`${process.env.PUBLIC_URL}//tickets?event=1}`}>Buy Tickets Now!</Link>
                     </div>
                   </div>
                 </div>

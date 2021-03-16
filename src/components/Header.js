@@ -81,7 +81,7 @@ const Header = (props) => {
                 <div className="col">
                   <div className="header_top_content d-flex flex-row align-items-center justify-content-start">
                     <div>
-                      <Link to="/">
+                      <Link to={`${process.env.PUBLIC_URL}/`}>
                         <div className="logo_container d-flex flex-row align-items-start justify-content-start">
                           <div className="logo_image">
                             <div>
@@ -194,7 +194,7 @@ const Header = (props) => {
                         <nav className="main_nav">
                           <ul>
                             <li className={pathname === "/" ? "active" : ""}>
-                              <Link to="/">Home</Link>
+                              <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
                             </li>
                             {/* <li
                               className={pathname === "/about" ? "active" : ""}
@@ -206,24 +206,24 @@ const Header = (props) => {
                                 pathname === "/speakers" ? "active" : ""
                               }
                             >
-                              <Link to="/speakers">Speakers</Link>
+                              <Link to={`${process.env.PUBLIC_URL}/speakers`}>Speakers</Link>
                             </li>
                             <li
                               className={pathname === "/events" ? "active" : ""}
                             >
-                              <Link to="/events">Events</Link>
+                              <Link to={`${process.env.PUBLIC_URL}/events`}>Events</Link>
                             </li>
                             <li
                               className={pathname === "/news" ? "active" : ""}
                             >
-                              <Link to="/news">News</Link>
+                              <Link to={`${process.env.PUBLIC_URL}/news`}>News</Link>
                             </li>
                             <li
                               className={
                                 pathname === "/contact" ? "active" : ""
                               }
                             >
-                              <Link to="/contact">Contact</Link>
+                              <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link>
                             </li>
                           </ul>
                         </nav>
@@ -232,7 +232,7 @@ const Header = (props) => {
                             <FontAwesomeIcon icon={faSearch} />
                           </div>
                           <div className="button header_button">
-                            <Link to="/tickets">Buy Tickets Now!</Link>
+                            <Link to={`${process.env.PUBLIC_URL}/tickets`}>Buy Tickets Now!</Link>
                           </div>
                         </div>
                       </div>

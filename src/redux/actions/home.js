@@ -3,37 +3,37 @@ import { GET_PRICING, GET_EVENTS, GET_INTROS } from "../type/home";
 const INTRO_LIST = [
   {
     order: 1,
-    image: "/images/intro_1.jpg",
+    image: "/react/images/intro_1.jpg",
     title: "Conference Program",
     subtitle: "Donec quis metus ac arcu luctus accumsan."
   },
   {
     order: 2,
-    image: "/images/intro_2.jpg",
+    image: "/react/images/intro_2.jpg",
     title: "Supersessions",
     subtitle: "Donec quis metus ac arcu luctus accumsan."
   },
   {
     order: 3,
-    image: "/images/intro_3.jpg",
+    image: "/react/images/intro_3.jpg",
     title: "The Speakers",
     subtitle: "Donec quis metus ac arcu luctus accumsan."
   },
   {
     order: 4,
-    image: "/images/intro_4.jpg",
+    image: "/react/images/intro_4.jpg",
     title: "Explore Sessions",
     subtitle: "Donec quis metus ac arcu luctus accumsan."
   },
   {
     order: 5,
-    image: "/images/intro_5.jpg",
+    image: "/react/images/intro_5.jpg",
     title: "Directory",
     subtitle: "Donec quis metus ac arcu luctus accumsan."
   },
   {
     order: 6,
-    image: "/images/intro_6.jpg",
+    image: "/react/images/intro_6.jpg",
     title: "Speakers Schedule",
     subtitle: "Donec quis metus ac arcu luctus accumsan."
   }
@@ -87,7 +87,7 @@ const EVENT_LIST = [
     title: "Business 101",
     duration: "02 PM - 03 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_1.jpg",
+    image: "/react/images/event_1.jpg",
     date: 22
   },
   {
@@ -97,7 +97,7 @@ const EVENT_LIST = [
     title: "About technology",
     duration: "03 PM - 05 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_2.jpg",
+    image: "/react/images/event_2.jpg",
     date: 22
   },
   {
@@ -107,7 +107,7 @@ const EVENT_LIST = [
     title: "Conference calls",
     duration: "05 PM - 08 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_3.jpg",
+    image: "/react/images/event_3.jpg",
     date: 22
   },
   {
@@ -117,7 +117,7 @@ const EVENT_LIST = [
     title: "Drinks and dinner",
     duration: "08 PM - 09 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_4.jpg",
+    image: "/react/images/event_4.jpg",
     date: 22
   },
   {
@@ -127,7 +127,7 @@ const EVENT_LIST = [
     title: "Business 101",
     duration: "02 PM - 03 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_5.jpg",
+    image: "/react/images/event_5.jpg",
     date: 23
   },
   {
@@ -137,7 +137,7 @@ const EVENT_LIST = [
     title: "About technology",
     duration: "03 PM - 05 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_6.jpg",
+    image: "/react/images/event_6.jpg",
     date: 23
   },
   {
@@ -147,7 +147,7 @@ const EVENT_LIST = [
     title: "Conference calls",
     duration: "05 PM - 08 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_7.jpg",
+    image: "/react/images/event_7.jpg",
     date: 23
   },
   {
@@ -157,7 +157,7 @@ const EVENT_LIST = [
     title: "Drinks and dinner",
     duration: "08 PM - 09 PM",
     speaker: "Speaker: Daniel Hill",
-    image: "/images/event_8.jpg",
+    image: "/react/images/event_8.jpg",
     date: 23
   }
 ];

@@ -10,7 +10,7 @@ const LatestNews = props => (
     </div>
     <div className="latest_content">
       <div className="latest_title">
-        <Link to={`/news/${props.id}`}>{props.title}</Link>
+        <Link to={`${process.env.PUBLIC_URL}/news/${props.id}`}>{props.title}</Link>
       </div>
       <div className="latest_date">{props.date}</div>
     </div>

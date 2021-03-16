@@ -31,10 +31,10 @@ const EventItem = props => {
                         <div className="breadcrumbs ml-auto">
                           <ul>
                             <li>
-                              <Link to="/">Home</Link>
+                              <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
                             </li>
                             <li>
-                              <Link to="/events">Events</Link>
+                              <Link to={`${process.env.PUBLIC_URL}/events`}>Events</Link>
                             </li>
                           </ul>
                         </div>
