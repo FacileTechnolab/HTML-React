@@ -9,7 +9,7 @@ const ContactPage = (props) => {
         <div className="home-image-container">
           <img
             className="parallax_background parallax-window"
-            src={`${process.env.PUBLIC_URL}/react/images/news.jpg`}
+            src={`/react/images/news.jpg`}
             alt="events"
           ></img>
           <div className="speaker_content_container">
@@ -21,7 +21,7 @@ const ContactPage = (props) => {
                     <div className="breadcrumbs ml-auto">
                       <ul>
                         <li>
-                          <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                          <Link to={`/`}>Home</Link>
                         </li>
                         <li>Contact</li>
                       </ul>
@@ -91,7 +91,7 @@ const ContactPage = (props) => {
             <div className="col-lg-5 offset-lg-1">
               <div className="contact_info_container">
                 <div>
-                  <Link to={`${process.env.PUBLIC_URL}/`}>
+                  <Link to={`/`}>
                     <div className="logo_container d-flex flex-row align-items-start justify-content-start">
                       <div className="logo_image">
                         <div>

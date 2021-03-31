@@ -16,18 +16,18 @@ import OrderPlan from "./OrderPlan";
 
 function index() {
   return (
-    <Router>
-      <Route path={`${process.env.PUBLIC_URL}/`} component={Header} />
+    <Router basename="/">
+      <Route path="/" component={Header} />
       <Switch>
-        <Route path={`${process.env.PUBLIC_URL}/speakers`} component={Speakers} />
-        <Route path={`${process.env.PUBLIC_URL}/events/:id`} component={EventItem} />
-        <Route path={`${process.env.PUBLIC_URL}/events`} component={Events} />
-        <Route path={`${process.env.PUBLIC_URL}/news/:id`} component={NewsItem} />
-        <Route path={`${process.env.PUBLIC_URL}/news`} component={News} />
-        <Route path={`${process.env.PUBLIC_URL}/contact`} component={Contact} />
-        <Route path={`${process.env.PUBLIC_URL}/tickets`} component={Tickets} />
-        <Route path={`${process.env.PUBLIC_URL}/orderPlan`} component={OrderPlan} />
-        <Route path={`${process.env.PUBLIC_URL}/`} component={Home} />
+        <Route path="/speakers" component={Speakers} />
+        <Route path="/events/:id" component={EventItem} />
+        <Route path="/events" component={Events} />
+        <Route path="/news/:id" component={NewsItem} />
+        <Route path="/news" component={News} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/tickets" component={Tickets} />
+        <Route path="/orderPlan" component={OrderPlan} />
+        <Route path="/" component={Home} />
       </Switch>
       <Footer />
     </Router>

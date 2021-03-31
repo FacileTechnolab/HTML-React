@@ -44,7 +44,7 @@ const OrderPlan = props => {
         <div className="home-image-container">
           <img
             className="parallax_background parallax-window"
-            src={`${process.env.PUBLIC_URL}/react/images/speakers.jpg`}
+            src={`/react/images/speakers.jpg`}
             alt="events"
           ></img>
           <div className="speaker_content_container">
@@ -56,7 +56,7 @@ const OrderPlan = props => {
                     <div className="breadcrumbs ml-auto">
                       <ul>
                         <li>
-                          <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                          <Link to={`/`}>Home</Link>
                         </li>
                         <li>Tickets</li>
                       </ul>

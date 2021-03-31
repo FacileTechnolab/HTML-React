@@ -20,7 +20,7 @@ function Speaker(props) {
                 <p>{props.desc}</p>
               </div>
               <div className="button speaker_button">
-                <Link to={`${process.env.PUBLIC_URL}/tickets?speaker=${props.id}`}>
+                <Link to={`/tickets?speaker=${props.id}`}>
                   Buy Tickets Now!
                 </Link>
               </div>
@@ -37,7 +37,7 @@ function Speaker(props) {
                 <p>{props.desc}</p>
               </div>
               <div className="button speaker_button">
-                <Link to={`${process.env.PUBLIC_URL}/tickets?speaker=${props.id}`}>
+                <Link to={`/tickets?speaker=${props.id}`}>
                   Buy Tickets Now!
                 </Link>
               </div>

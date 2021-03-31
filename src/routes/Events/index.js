@@ -27,7 +27,7 @@ const Events = props => {
     for (let i = 1; i <= totalPage; i++) {
       list.push(
         <li key={i} className={activePage === i ? "active" : null}>
-          <Link to={`${process.env.PUBLIC_URL}/events`} onClick={getEventPage.bind(this, i)}>
+          <Link to={`/events`} onClick={getEventPage.bind(this, i)}>
             {i < 10 ? "0" + i : i}.
           </Link>
         </li>
@@ -43,7 +43,7 @@ const Events = props => {
         <div className="home-image-container">
           <img
             className="parallax_background parallax-window"
-            src={`${process.env.PUBLIC_URL}/react/images/events.jpg`}
+            src={`/react/images/events.jpg`}
             alt="events"
           ></img>
           <div className="speaker_content_container">
@@ -55,7 +55,7 @@ const Events = props => {
                     <div className="breadcrumbs ml-auto">
                       <ul>
                         <li>
-                          <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                          <Link to={`/`}>Home</Link>
                         </li>
                         <li>Events</li>
                       </ul>

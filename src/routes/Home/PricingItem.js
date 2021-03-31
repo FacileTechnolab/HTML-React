@@ -14,7 +14,7 @@ const PricingItem = props => (
         </ul>
         <div className="pricing_info">i</div>
         <div className="button pricing_button">
-          <Link to={`${process.env.PUBLIC_URL}/orderPlan?plan=${props.id}`}>Order plan</Link>
+          <Link to={`/orderPlan?plan=${props.id}`}>Order plan</Link>
         </div>
       </div>
     </div>

@@ -31,10 +31,10 @@ const NewsItem = props => {
                         <div className="breadcrumbs ml-auto">
                           <ul>
                             <li>
-                              <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                              <Link to={`/`}>Home</Link>
                             </li>
                             <li>
-                              <Link to={`${process.env.PUBLIC_URL}/news`}>News</Link>
+                              <Link to={`/news`}>News</Link>
                             </li>
                           </ul>
                         </div>
@@ -54,7 +54,7 @@ const NewsItem = props => {
                 in{" "}
                 {props.newsItem.tags.map((item, index, array) => (
                   <Fragment key={index}>
-                    <Link key={index} to={`${process.env.PUBLIC_URL}//news?category=${item.id}`}>
+                    <Link key={index} to={`/news?category=${item.id}`}>
                       {item.title}
                     </Link>
                     {index < array.length - 1 && ", "}
