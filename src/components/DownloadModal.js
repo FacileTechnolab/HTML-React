@@ -48,7 +48,7 @@ const DownloadModal = (props) => {
       setHasError(false);
       setValidEmail(true);
 
-      fetch("https://auto.faciletechnolab.com/api/DownloadRequest", {
+      fetch("https://auto.faciletechnolab.com/DownloadRequest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
