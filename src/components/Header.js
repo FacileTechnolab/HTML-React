@@ -105,74 +105,39 @@ const Header = (props) => {
                     <div className="header_social ml-auto">
                       <ul>
                         <li>
-                          <Link
-                            to={{
-                              pathname: "https://www.faciletechnolab.com/",
-                            }}
-                            target="_blank"
-                          >
+                          <a target="_blank" href="https://www.faciletechnolab.com/">
                             <span className="facile-logo"></span>
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
-                            to={{
-                              pathname: "https://www.pinterest.com/",
-                            }}
-                            target="_blank"
-                          >
+                          <a target="_blank" href="https://www.pinterest.com/">
                             <FontAwesomeIcon icon={faPinterest} />
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
-                            to={{
-                              pathname: "https://www.facebook.com/",
-                            }}
-                            target="_blank"
-                          >
+                          <a target="_blank" href="https://www.facebook.com/">
                             <FontAwesomeIcon icon={faFacebook} />
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
-                            to={{
-                              pathname: "https://twitter.com/",
-                            }}
-                            target="_blank"
-                          >
+                          <a target="_blank" href="https://twitter.com/">
                             <FontAwesomeIcon icon={faTwitter} />
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
-                            to={{
-                              pathname: "https://dribbble.com/",
-                            }}
-                            target="_blank"
-                          >
+                          <a target="_blank" href="https://dribbble.com/">
                             <FontAwesomeIcon icon={faDribbble} />
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
-                            to={{
-                              pathname: "https://www.behance.net/",
-                            }}
-                            target="_blank"
-                          >
+                          <a target="_blank" href="https://www.behance.net/">
                             <FontAwesomeIcon icon={faBehance} />
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
-                            to={{
-                              pathname: "https://www.linkedin.com/",
-                            }}
-                            target="_blank"
-                          >
+                          <a target="_blank" href="https://www.linkedin.com/">
                             <FontAwesomeIcon icon={faLinkedin} />
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>

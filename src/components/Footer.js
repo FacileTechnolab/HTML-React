@@ -116,74 +116,39 @@ const Footer = () => (
                   </div>
                   <ul className="footer_social_list">
                     <li>
-                      <Link
-                        to={{
-                          pathname: "https://www.faciletechnolab.com/"
-                        }}
-                        target="_blank"
-                      >
+                      <a target="_blank" href="https://www.faciletechnolab.com/">
                         <span className="facile-logo"></span>
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to={{
-                          pathname: "https://www.pinterest.com/"
-                        }}
-                        target="_blank"
-                      >
-                        <FontAwesomeIcon icon={faPinterest} color="white" />
-                      </Link>
+                      <a target="_blank" href="https://www.pinterest.com/">
+                        <FontAwesomeIcon icon={faPinterest} />
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to={{
-                          pathname: "https://www.facebook.com/"
-                        }}
-                        target="_blank"
-                      >
-                        <FontAwesomeIcon icon={faFacebook} color="white" />
-                      </Link>
+                      <a target="_blank" href="https://www.facebook.com/">
+                        <FontAwesomeIcon icon={faFacebook} />
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to={{
-                          pathname: "https://twitter.com/"
-                        }}
-                        target="_blank"
-                      >
-                        <FontAwesomeIcon icon={faTwitter} color="white" />
-                      </Link>
+                      <a target="_blank" href="https://twitter.com/">
+                        <FontAwesomeIcon icon={faTwitter} />
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to={{
-                          pathname: "https://dribbble.com/"
-                        }}
-                        target="_blank"
-                      >
-                        <FontAwesomeIcon icon={faDribbble} color="white" />
-                      </Link>
+                      <a target="_blank" href="https://dribbble.com/">
+                        <FontAwesomeIcon icon={faDribbble} />
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to={{
-                          pathname: "https://www.behance.net/"
-                        }}
-                        target="_blank"
-                      >
-                        <FontAwesomeIcon icon={faBehance} color="white" />
-                      </Link>
+                      <a target="_blank" href="https://www.behance.net/">
+                        <FontAwesomeIcon icon={faBehance} />
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to={{
-                          pathname: "https://www.linkedin.com/"
-                        }}
-                        target="_blank"
-                      >
+                      <a target="_blank" href="https://www.linkedin.com/">
                         <FontAwesomeIcon icon={faLinkedin} color="white" />
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -196,26 +161,16 @@ const Footer = () => (
                     {new Date().getFullYear() + " "}
                     All rights reserved | This template is made with
                     <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-                    <Link
-                      to={{
-                        pathname: "https://colorlib.com"
-                      }}
-                      target="_blank"
-                    >
+                    <a target="_blank" href="https://colorlib.com">
                       Colorlib
-                    </Link>
+                    </a>
                   </div>
                   <div className="copyright">
                     This template is converted with{" "}
                     <FontAwesomeIcon icon={faHeart} /> by{" "}
-                    <Link
-                      to={{
-                        pathname: "https://www.faciletechnolab.com/"
-                      }}
-                      target="_blank"
-                    >
+                    <a target="_blank" href="https://www.faciletechnolab.com/">
                       FacileTechnolab
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

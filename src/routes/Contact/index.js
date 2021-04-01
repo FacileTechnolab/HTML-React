@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
 const ContactPage = (props) => {
+  const [isModelOpen, setIsModelOpen] = useState(false);
+  const handleModelClose = () => {
+    setIsModelOpen(false);
+  }
+  const btnClick = () => {
+    setIsModelOpen(true);
+  }
   return (
     <>
       <div className="speaker-header">
@@ -82,7 +89,7 @@ const ContactPage = (props) => {
                     placeholder="Message"
                     required="required"
                   ></textarea>
-                  <button className="button contact_button">
+                  <button className="button contact_button" onClick={btnClick}>
                     <span>Send Message</span>
                   </button>
                 </form>
@@ -152,6 +159,44 @@ const ContactPage = (props) => {
           </div>
         </div>
       </div>
+
+      <div
+        className={`modal fade ${isModelOpen ? "show" : ""}`}
+        tabIndex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+        style={{ display: isModelOpen ? "block" : "none" }}
+      >
+        <div className="modal-dialog modal-dialog-centered" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title text-primary"></h5>
+              <button
+                type="button"
+                className="close"
+                aria-label="Close"
+                onClick={handleModelClose}
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body text-dark">
+              This is a test site your data will not be submitted to the server.
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={handleModelClose}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 };
