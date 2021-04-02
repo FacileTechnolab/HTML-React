@@ -62,9 +62,10 @@ const DownloadModal = (props) => {
       }).then((result) => {
         if (result.status === 201) {
           hideDownloadBar();
+          closeModal();
           if (modalType === "download")
             window.open(
-              "https://github.com/FacileTechnolab/FacileTechnolab.github.io/releases/download/1.0/HTML-React-develop.zip",
+              "https://github.com/FacileTechnolab/HTML-React/archive/refs/heads/develop.zip",
               "_blank"
             );
         }
