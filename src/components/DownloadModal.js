@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button, Form, Col } from "react-bootstrap";
+import axios from "axios"
 
 const DownloadModal = (props) => {
   const [firstName, setFirstName] = useState("");
@@ -34,7 +35,9 @@ const DownloadModal = (props) => {
       }
     }
   };
-
+  const closeDownloadModal = () => {
+    props.closeModal();
+  }
   const handleSubmit = () => {
     if (
       firstName.trim().length === 0 ||
@@ -47,27 +50,20 @@ const DownloadModal = (props) => {
     } else {
       setHasError(false);
       setValidEmail(true);
-
-      fetch("https://auto.faciletechnolab.com/DownloadRequest", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstname: firstName,
-          lastname: lastName,
-          email: email,
-          segment3: modalType,
-        }),
+      closeDownloadModal();
+      axios.post("https://auto.faciletechnolab.com/DownloadRequest", {
+        firstname: firstName,
+        lastname: lastName,
+        email: email,
+        segment3: modalType,
+        segment1: 'github.io',
+        segment2: 'react',
       }).then((result) => {
-        if (result.status === 201) {
-          hideDownloadBar();
-          closeModal();
-          if (modalType === "download")
-            window.open(
-              "https://github.com/FacileTechnolab/HTML-React/archive/refs/heads/develop.zip",
-              "_blank"
-            );
+        if (modalType === "download") {
+          window.open(
+            "https://github.com/FacileTechnolab/HTML-React/archive/refs/heads/develop.zip",
+            "_blank"
+          );
         }
       });
     }
